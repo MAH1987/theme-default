@@ -83,7 +83,6 @@
 {% endblock %}
 
 {% block content %}
-  {% set rendered_pagination = macros.render_pagination(pagination) %}
 
   <h1>{{ topic.title|e }}</h1>
 
@@ -104,7 +103,7 @@
     {% endcall %}
   {% endif %}
 
-  {{ rendered_pagination }}
+  {{ macros.render_pagination(pagination) }}
 
   {% if polls %}
     {% include 'forum/topic__polls.html' %}
@@ -165,5 +164,5 @@
     </div>
   {% endfor %}
 
-  {{ rendered_pagination }}
+  {{ macros.render_pagination(pagination) }}
 {% endblock %}

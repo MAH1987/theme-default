@@ -21,8 +21,7 @@
 {% endblock %}
 
 {% block content %}
-  {% set rendered_pagination = macros.render_pagination(pagination) %}
-  {{ rendered_pagination }}
+  {{ macros.render_pagination(pagination) }}
 
   <div class="forum-topic-list">
     <div class="forum-topic-list-heading">
@@ -35,5 +34,5 @@
     {% include 'forum/topiclist-ul-body.html' %}
   </div>
 
-  {{ rendered_pagination }}
+  {{ macros.render_pagination(pagination) }}
 {% endblock %}
