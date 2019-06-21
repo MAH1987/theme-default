@@ -108,7 +108,6 @@ body {
   .message();
 }
 
-
 .pagination {
   &:extend(.pagination);
 
@@ -133,6 +132,36 @@ body {
       & > a, & > span {
         &, &:hover , &:focus {
           &:extend(.pagination > .disabled > a);
+        }
+      }
+    }
+  }
+}
+
+.pagination-sm {
+  &:extend(.pagination-sm);
+
+  & > li {
+    &:extend(.pagination-sm > li);
+
+    & > a, & > span {
+      &:extend(.pagination-sm > li > a);
+
+      &:hover, &:focus {
+        &:extend(.pagination-sm > li > a:hover);
+      }
+    }
+    &.active {
+      & > a, & > span {
+        &, &:hover , &:focus {
+          &:extend(.pagination-sm > .active > a);
+        }
+      }
+    }
+    &.disabled {
+      & > a, & > span {
+        &, &:hover , &:focus {
+          &:extend(.pagination-sm > .disabled > a);
         }
       }
     }
